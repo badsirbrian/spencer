@@ -1,0 +1,4 @@
+echo > table
+for j in *.business; do . ./$j; echo $name:$address1:address2 >> table; done
+sort -r table
+
