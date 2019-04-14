@@ -2,3 +2,17 @@ baseURL = "http://spencertn.com/"
 languageCode = "en-us"
 title = "The City of Spencer, Tennesse"
 theme = "ananke"
+
+[menu]
+
+  [[menu.main]]
+    identifier = "vanburencounty"
+    name = "Van Buren County"
+    url = "http://www.vanburencountytn.com/"
+    parent = "Government"
+
+  [[menu.main]]
+    identifier = "tennessee"
+    name = "State Government"
+    url = "https://www.tn.gov/"
+    parent = "Government"
