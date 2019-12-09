@@ -1,0 +1,18 @@
+Spencer
+=======
+
+The official website for the city of Spencer, Tennessee.
+Built by the fine chaps at Bad Sir Brian Coworking Space.
+
+Powered by Hugo (gohugo.io), httpd (openbsd.org), and love.
+
+Prerequisites
+-------------
+- Hugo (v0.53+)
+- Static Web Server
+
+Building the Site
+-----------------
+Simply run hugo command and watch the public/ directory be populated.
+
+    $ hugo
