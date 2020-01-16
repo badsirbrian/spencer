@@ -24,12 +24,16 @@
 *          { margin: 0; padding: 0; font: inherit; color: inherit; line-height: 1.6em; }
 body * + * { margin-top: 1.6em; }
 
+
 wrapper,aside,with-aside { display: block; }
+
   wrapper    { max-width: 50rem; margin: auto; overflow: auto; }
   aside      { max-width: 16.2em; float: right; } /* XXX: dark box styling */
   with-aside { max-width: 30em;   float: left; }
 
+
 header { background: var(--cindigo); color: var(--cplaster); }
+
   nav        { overflow: auto; font-size: 0.875em; }
   nav li     { display: block; list-style: none; float: left }
   nav li+li  { margin: 0 0 0 3.2em; }
@@ -39,15 +43,16 @@ header { background: var(--cindigo); color: var(--cplaster); }
   .hero a    { color: var(--cmossgreen); text-decoration: none; }
   /* XXX: add a default hero image */
 
-main { /* XXX: todo */ }
+
+main     { /* XXX: todo */ }
+
   main a { color: var(--csangria); }
 
-/* col width = (50 - 1.6*3) / 4 = 11.3 */
 
 footer             { background: var(--cmossgreen); border-left: 3.2em solid var(--craisin);
                      padding: 1.6em 0; overflow: hidden; margin: 3.2em 0 0; }
   footer wrapper   { position: relative; left: -1.6em; overflow: initial; }
-  footer .col      { float: left; width: 11.3em; }
+  footer .col      { float: left; width: 11.3em; } /* col width = (50 - 1.6*3) / 4 = 11.3 */
   footer .left, footer .right { width: 24.2em; min-height: 14em; }
   footer .col+.col { margin: 0 0 0 1.6em; }
   footer .left     { float: left; }
@@ -60,9 +65,10 @@ footer             { background: var(--cmossgreen); border-left: 3.2em solid var
   footer p         { font-size: .75em; }
   footer h2        { font-size: .875em; font-weight: bold; }
   footer li        { margin: 0 0 .4em 0; list-style: none; }
-  footer dt { float: left; width: 5.25em; font-weight: bold; }
-  footer dl * + * { margin-top: .4em; }
-  footer a { color: var(--cindigo); }
+  footer dt        { float: left; width: 5.25em; font-weight: bold; }
+  footer dl * + *  { margin-top: .4em; }
+  footer a         { color: var(--cindigo); }
+
 
 [href^=tel] { color: inherit; text-decoration: inherit; }
-.important { color: var(--csangria); font-weight: bold; }
+.important  { color: var(--csangria); font-weight: bold; }
