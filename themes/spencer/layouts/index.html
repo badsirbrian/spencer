@@ -1,10 +1,12 @@
 {{ define "main" }}
-	<main>
-		{{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
-		{{ range $paginator.Pages }}
-			{{ .Render "summary" }}
-		{{ end }}
-		{{ partial "pagination.html" . }}
-	</main>
-{{ partial "sidebar.html" . }}
+    <wrapper>
+        <with-aside>
+            <main>
+                <p>Spencer is named after Thomas Sharp Spencer (d. 1794), a long hunter who passed through the Van Buren County area in the mid-18th century. The town was established in 1850 and <a href=.>incorporated</a> in 1909.[1]</p>
+                <p><a href=.>Burritt</a> College was located in Spencer from 1848 until its closure in 1939.[1] In July 1946, James Monroe Smith, former president of Louisiana State University in Baton Rouge, Louisiana, accepted the position as head of academic studies at Burritt Preparatory School for Boys, a down-graded version of Burritt College.[6]</p>
+            </main>
+        </with-aside>
+
+        {{ partial "aside.html" . }}
+    </wrapper>
 {{ end }}

@@ -1,5 +1,5 @@
 <header>
-	<a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+    <wrapper>
 	{{ with .Site.Menus.main }}
 	<nav>
 		<ul>
@@ -9,4 +9,8 @@
 		</ul>
 	</nav>
 	{{ end }}
+    </wrapper>
 </header>
+<div class=hero>
+    <wrapper> <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a> </wrapper>
+</div>

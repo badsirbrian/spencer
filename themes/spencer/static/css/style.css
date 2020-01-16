@@ -1,0 +1,64 @@
+:root {
+  font-family: var(--ttext);
+  color:       var(--craisin);
+  background:  var(--cplaster);
+
+  /* typefaces XXX: set up the font faces */
+  --ttext: public sans,lucida grande,lucida sans,verdana,sans-serif;
+  --temph: angkoon,times,serif;
+
+  /* color palette */
+  --csangria:   #92140C; /* warm red, used for main links and heavy emphasis */
+  --cmossgreen: #BCD3B0;
+  --cteagreen:  #D5E2C3;
+  --cindigo:    #2F3948;
+  --cplaster:   #F7F2EF;
+  --cpuce:      #483D3C; /* gray, used for asides */
+  --craisin:    #261C22; /* darker gray, main text */
+  --clicorice:  #161416; /* extra dark gray, used in place of raisin on top of indigo or the greens */
+}
+
+*          { margin: 0; padding: 0; font: inherit; color: inherit; line-height: 1.6em; }
+body * + * { margin-top: 1.6em; }
+
+wrapper,aside,with-aside { display: block; }
+  wrapper    { max-width: 50em; margin: auto; overflow: auto; }
+  aside      { max-width: 16.2em; float: right; } /* XXX: dark box styling */
+  with-aside { max-width: 30em;   float: left; }
+
+header { background: var(--cindigo); color: var(--cplaster); }
+  nav        { overflow: auto; font-size: 0.875em; }
+  nav li     { display: block; list-style: none; float: left }
+  nav li+li  { margin: 0 0 0 3.2em; }
+  nav a      { text-decoration: none; line-height: 4.8em; display: block; border-bottom: 3px solid transparent }
+  nav a:hover{ border-bottom-color: var(--csangria); }
+  .hero      { font-family: var(--temph); background: var(--clicorice); margin: 0 0 3.2em; padding: 5vw; }
+  .hero a    { color: var(--cmossgreen); text-decoration: none; }
+
+main { /* XXX: todo */ }
+  main a { color: var(--csangria); }
+
+/* col width = (50 - 1.6*3) / 4 = 11.3 */
+
+footer             { background: var(--cmossgreen); border-left: 3.2em solid var(--craisin);
+                     padding: 1.6em 0; overflow: hidden; margin: 3.2em 0 0; }
+  footer wrapper   { position: relative; left: -1.6em; overflow: initial; }
+  footer .col      { float: left; width: 11.3em; }
+  footer .left, footer .right { width: 24.2em; min-height: 14em; }
+  footer .col+.col { margin: 0 0 0 1.6em; }
+  footer .left     { float: left; }
+    footer .left .col { margin-top: 1.6em; }
+  footer .right    { float: right; background: var(--cteagreen);
+                     margin: -1.6em -25vw -1.6em 0; padding: 1.6em 25vw 1.6em 1.6em; }
+  footer address,
+  footer ul,
+  footer dl,
+  footer p         { font-size: .75em; }
+  footer h2        { font-size: .875em; font-weight: bold; }
+  footer li        { margin: 0 0 .4em 0; list-style: none; }
+  footer dt { float: left; width: 5.25em; font-weight: bold; }
+  footer dl * + * { margin-top: .4em; }
+  footer a { color: var(--cindigo); }
+  footer .important { color: var(--csangria); }
+
+[href^=tel] { color: inherit; text-decoration: inherit; }

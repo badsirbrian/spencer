@@ -1,6 +1,6 @@
 baseURL = "http://spencertn.com/"
 languageCode = "en-us"
-title = "The City of Spencer, Tennesse"
+title = "The City of Spencer, Tennessee"
 theme = "spencer"
 
 [menu]
