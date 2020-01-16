@@ -26,14 +26,12 @@ body * + * { margin-top: 1.6em; }
 
 
 wrapper,aside,with-aside { display: block; }
-
   wrapper    { max-width: 50rem; margin: auto; overflow: auto; }
   aside      { max-width: 16.2em; float: right; } /* XXX: dark box styling */
   with-aside { max-width: 30em;   float: left; }
 
 
 header { background: var(--cindigo); color: var(--cplaster); }
-
   nav        { overflow: auto; font-size: 0.875em; }
   nav li     { display: block; list-style: none; float: left }
   nav li+li  { margin: 0 0 0 3.2em; }
@@ -45,7 +43,6 @@ header { background: var(--cindigo); color: var(--cplaster); }
 
 
 main     { /* XXX: todo */ }
-
   main a { color: var(--csangria); }
 
 
