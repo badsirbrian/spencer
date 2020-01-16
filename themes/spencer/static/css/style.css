@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Public+Sans:400,700&display=swap');
+@import url('3ADA42_0_0.css');
 
 :root {
   font-family: var(--ttext);
@@ -7,7 +8,7 @@
 
   /* typefaces XXX: set up the font faces */
   --ttext: public sans,lucida grande,lucida sans,verdana,sans-serif;
-  --temph: angkoon,times,serif;
+  --temph: ffangkoon,times,serif;
 
   /* color palette */
   --csangria:   #92140C; /* warm red, used for main links and heavy emphasis */
