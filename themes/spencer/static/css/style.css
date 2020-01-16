@@ -25,7 +25,7 @@
 body * + * { margin-top: 1.6em; }
 
 wrapper,aside,with-aside { display: block; }
-  wrapper    { max-width: 50em; margin: auto; overflow: auto; }
+  wrapper    { max-width: 50rem; margin: auto; overflow: auto; }
   aside      { max-width: 16.2em; float: right; } /* XXX: dark box styling */
   with-aside { max-width: 30em;   float: left; }
 
@@ -35,8 +35,9 @@ header { background: var(--cindigo); color: var(--cplaster); }
   nav li+li  { margin: 0 0 0 3.2em; }
   nav a      { text-decoration: none; line-height: 4.8em; display: block; border-bottom: 3px solid transparent }
   nav a:hover{ border-bottom-color: var(--csangria); }
-  .hero      { font-family: var(--temph); background: var(--clicorice); margin: 0 0 3.2em; padding: 5vw; }
+  .hero      { font: 2.6em var(--temph); background: var(--clicorice); margin: 0 0 3.2rem; padding: 5vw; }
   .hero a    { color: var(--cmossgreen); text-decoration: none; }
+  /* XXX: add a default hero image */
 
 main { /* XXX: todo */ }
   main a { color: var(--csangria); }
