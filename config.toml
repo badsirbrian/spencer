@@ -3,6 +3,13 @@ languageCode = "en-us"
 title = "The City of Spencer, Tennessee"
 theme = "spencer"
 
+[params]
+  header = "Spencer Tennessee"
+  description = "A Small City on the Cumberland Plateau"
+
+[permalinks]
+  updates = "/:year/:month/:title/"
+
 [menu]
 
   [[menu.main]]

@@ -26,9 +26,15 @@ body * + * { margin-top: 1.6em; }
 
 
 wrapper,aside,with-aside { display: block; }
-  wrapper    { max-width: 50rem; margin: auto; overflow: auto; }
-  aside      { max-width: 16.2em; float: right; } /* XXX: dark box styling */
-  with-aside { max-width: 30em;   float: left; }
+  wrapper      { max-width: 50rem; margin: auto; overflow: auto; }
+  aside        { max-width: 16.2em; float: right; padding: 1.6em; color: var(--cplaster); background: var(--cpuce); margin: 0; } /* XXX: dark box styling */
+  aside h3     { font-size: .875em; font-weight: bold; }
+  aside h3 a   { text-decoration: none; }
+  aside ul     { list-style: none; }
+  aside ul a   { color: var(--cplaster); }
+  aside ul div { color: var(--cmossgreen); font-size: 0.875em; text-transform: uppercase; }
+  with-aside   { max-width: 30em;   float: left; }
+
 
 
 header { background: var(--cindigo); color: var(--cplaster); }
@@ -37,8 +43,9 @@ header { background: var(--cindigo); color: var(--cplaster); }
   nav li+li  { margin: 0 0 0 3.2em; }
   nav a      { text-decoration: none; line-height: 4.8em; display: block; border-bottom: 3px solid transparent }
   nav a:hover{ border-bottom-color: var(--csangria); }
-  .hero      { font: 2.6em var(--temph); background: var(--clicorice); margin: 0 0 3.2rem; padding: 5vw; }
-  .hero a    { color: var(--cmossgreen); text-decoration: none; }
+  .hero      { color: var(--cmossgreen); font: 4em var(--temph); background: var(--clicorice); margin: 0 0 3.2rem; padding: 5vw; }
+  .hero a    { text-decoration: none; }
+  .hero div  { font: .35em var(--temph); text-transform: uppercase; margin: 0; }
   /* XXX: add a default hero image */
 
 
@@ -69,3 +76,24 @@ footer             { background: var(--cmossgreen); border-left: 3.2em solid var
 
 [href^=tel] { color: inherit; text-decoration: inherit; }
 .important  { color: var(--csangria); font-weight: bold; }
+
+/* Mobile Overrides */
+@media only screen and (max-width: 57rem) {
+  main   { margin: 1.6em; }
+  nav li { margin-left: 3.2em; }
+
+  footer, .hero { margin: initial; }
+
+  aside,
+  with-aside,
+  footer,
+  footer .col,
+  footer .right,
+  footer .left { float: none; max-width: initial; width: auto; }
+
+  footer .right { margin-left: -1.6em; margin-top: 1.6em; }
+
+  footer             { border: none; border-top: 3.2em solid var(--craisin); }
+  footer .col+.col   { margin: auto; margin-top: 2em; }
+  footer wrapper     { margin-left: 3em;  }
+}
