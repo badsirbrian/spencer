@@ -1,13 +1,36 @@
 {{ define "main" }}
-    <wrapper>
+    <wrapper class="p-{{ .Permalink | relURL | anchorize }} {{ if reflect.IsSlice .Params.class -}}
+                    {{ delimit .Params.class " " | safeHTMLAttr }}{{- end }}">
         <with-aside>
             <main>
                 <article>
                     <h1>{{ .Title }}</h1>
-                    <time>{{ .Date.Format "02.01.2006 15:04" }}</time>
+
+                    {{ if .Date }}
+                        <time>{{ .Date.Format "02.01.2006 15:04" }}</time>
+                    {{ end }}
+
+                    {{ if or .Params.address1 .Params.address2 }}
+                    <address>
+                        {{ .Params.address1 }}
+                        {{ if .Params.address2 -}}
+                            <br>{{ .Params.address2 }}
+                        {{ end }}
+                    </address>
+                    {{ end }}
+
+                    {{ if .Params.phone }}
+                        <p><strong>Phone:</strong> {{ .Params.phone }}</p>
+                    {{ end }}
+
+                    {{ if .Params.hours }}
+                        <p><strong>Hours:</strong> {{ .Params.hours }}</p>
+                    {{ end }}
+
                     <div>
                         {{ .Content }}
                     </div>
+                    
                     {{ with .Params.tags }}
                         <div>
                             <ul id="tags">

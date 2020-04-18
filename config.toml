@@ -1,25 +1,25 @@
-baseURL = "http://spencertn.com/"
+baseURL      = "http://spencertn.com/"
 languageCode = "en-us"
-title = "The City of Spencer, Tennessee"
-theme = "spencer"
+title        = "The City of Spencer, Tennessee"
+theme        = "spencer"
+paginate     = 30
 
 [params]
-  header = "Spencer Tennessee"
+  header      = "Spencer Tennessee"
   description = "A Small City on the Cumberland Plateau"
 
 [permalinks]
   updates = "/:year/:month/:title/"
 
 [menu]
-
   [[menu.main]]
     identifier = "vanburencounty"
-    name = "Van Buren County"
-    url = "http://www.vanburencountytn.com/"
-    parent = "Government"
+    name       = "Van Buren County"
+    url        = "http://www.vanburencountytn.com/"
+    parent     = "Government"
 
   [[menu.main]]
     identifier = "tennessee"
-    name = "State Government"
-    url = "https://www.tn.gov/"
-    parent = "Government"
+    name       = "State Government"
+    url        = "https://www.tn.gov/"
+    parent     = "Government"

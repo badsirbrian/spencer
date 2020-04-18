@@ -42,7 +42,8 @@ header { background: var(--cindigo); color: var(--cplaster); }
   nav li     { display: block; list-style: none; float: left }
   nav li+li  { margin: 0 0 0 3.2em; }
   nav a      { text-decoration: none; line-height: 4.8em; display: block; border-bottom: 3px solid transparent }
-  nav a:hover{ border-bottom-color: var(--csangria); }
+  nav a:hover,
+  nav .active a{ border-bottom-color: var(--csangria); }
   .hero      { color: var(--cmossgreen); font: 4em var(--temph); background: var(--clicorice); margin: 0 0 3.2rem; padding: 5vw; }
   .hero a    { text-decoration: none; }
   .hero div  { font: .35em var(--temph); text-transform: uppercase; margin: 0; }
@@ -51,6 +52,24 @@ header { background: var(--cindigo); color: var(--cplaster); }
 
 main     { /* XXX: todo */ }
   main a { color: var(--csangria); }
+  main h1 { font-size: 2em; font-weight: bold; }
+  main h2 { font-size: .875em; font-weight: bold; }
+  main h3 { font-size: .875em; font-weight: bold; }
+  main strong, main b { font-weight: bold; }
+
+  main .sub { columns: 3; }
+  .p-departments main .sub > *,
+  .p-government main .sub > * { background-color: #0000000a; padding: 2em; text-align: center; }
+
+  /*.p-businesses main { columns: 3; }*/
+  /*.p-businesses main > div { column-span: all; }*/
+  /*article.menus div p { margin: 1em; break-inside: avoid; }*/
+
+  .paginator { text-align: center; }
+  .paginator a { margin: 0; }
+  .paginator a:first-child { float: left; }
+  /*.paginator span { display: inline; }*/
+  .paginator a:last-child { float: right; }
 
 
 footer             { background: var(--cmossgreen); border-left: 3.2em solid var(--craisin);
@@ -81,6 +100,7 @@ footer             { background: var(--cmossgreen); border-left: 3.2em solid var
 @media only screen and (max-width: 57rem) {
   main   { margin: 1.6em; }
   nav li { margin-left: 3.2em; }
+  main .sub { columns: 2; }
 
   footer, .hero { margin: initial; }
 
@@ -96,4 +116,8 @@ footer             { background: var(--cmossgreen); border-left: 3.2em solid var
   footer             { border: none; border-top: 3.2em solid var(--craisin); }
   footer .col+.col   { margin: auto; margin-top: 2em; }
   footer wrapper     { margin-left: 3em;  }
+}
+
+@media only screen and (max-width: 27rem) {
+  main .sub { columns: initial; }
 }

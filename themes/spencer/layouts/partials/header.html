@@ -1,18 +1,17 @@
 <header>
     <wrapper>
-	{{ with .Site.Menus.main }}
-	<nav>
-		<ul>
-			{{ range . }}
-			<li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
-			{{ end }}
-		</ul>
-	</nav>
-	{{ end }}
+    <nav>
+        <ul>
+            {{- $currentPage := . -}}
+            {{ range .Site.Menus.main }}
+            <li class="{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}active{{end}}"><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+            {{- end }}
+        </ul>
+    </nav>
     </wrapper>
 </header>
 <div class=hero>
     <wrapper> <a href="{{ .Site.BaseURL }}">{{ .Site.Params.Header }}</a>
-              <div>{{ .Site.Params.Description }}</div>
+        <div>{{ .Site.Params.Description }}</div>
     </wrapper>
 </div>
