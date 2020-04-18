@@ -1,5 +1,6 @@
 ---
 title: "Businesses"
-date: 2019-04-14T15:15:52-05:00
 menu:  "main"
 ---
+
+Spencer is home to a number of local businesses. Show your support for your community and remember to shop local first.
