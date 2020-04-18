@@ -1,6 +1,5 @@
 {{ define "main" }}
-<wrapper class="p-{{ .Permalink | relURL | anchorize }} {{ if reflect.IsSlice .Params.class -}}
-                {{ delimit .Params.class " " | safeHTMLAttr }}{{- end }}">
+<wrapper class="p-{{ .Permalink | relURL | anchorize }}">
         <main>
             {{ if or .Title .Content }}
             <div>
