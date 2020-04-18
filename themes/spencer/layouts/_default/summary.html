@@ -1,15 +1,13 @@
 <article>
-    <with-aside>
-        <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-        <time>{{ .Date.Format "02.01.2006 15:04" }}</time>
-        {{ range .Params.tags }}
-        <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+    <time>{{ .Date.Format "Monday, Jan 2, 2006 @ 03:04 pm" }}</time>
+    {{ range .Params.tags }}
+    <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+    {{ end }}
+    <div>
+        {{ .Summary }}
+        {{ if .Truncated }}
+        <a href="{{ .Permalink }}">Read more...</a>
         {{ end }}
-        <div>
-            {{ .Summary }}
-            {{ if .Truncated }}
-                <a href="{{ .Permalink }}">Read more...</a>
-            {{ end }}
-        </div>
-    </with-aside>
+    </div>
 </article>
